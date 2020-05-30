@@ -1,13 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
     <title>Document</title>
 </head>
+
 <body>
-    Reto 1
+    <h1>ENCRIPTADOR</h1>
+
+<div>
+    <label for="fname">Numero de Encriptacion</label>
+    <input type="number" id="ECNumber" oninput="ECN()" >
+
+    <label for="lname">Ingrese el texto</label>
+    <input type="text" id="ECText" oninput="ECT()">
+
+    <h2>Resultado:</h2><label class="results" id="ECRes">..</label>
+
+</div>
+
+<h1>DESENCRIPTADOR</h1>
+<div>
+    <label for="fname">Numero de Encriptacion</label>
+    <input type="number" id="DECNumber" oninput="DECN()" >
+
+    <label for="lname">Ingrese el texto</label>
+    <input type="text" id="DECText" oninput="DECT()">
+
+    <h2>Resultado:</h2><label class="results" id="DECRes">..</label>
+
+</div>
 </body>
 <script src="js/Script.js"></script>
 <script src="js/Scriptv2.js"></script>
+
 </html>

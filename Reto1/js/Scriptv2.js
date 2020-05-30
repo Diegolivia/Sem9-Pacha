@@ -41,3 +41,36 @@ function Decript(CiphText, CiphNum) {
   });
   return str;
 }
+
+
+var ECte=""
+var ECnu=0
+var DECte=""
+var DECnu=0
+function ECN(){
+ECnu=parseInt(document.getElementById("ECNumber").value);
+UpdateE()
+}
+
+function ECT(){
+ECte=document.getElementById("ECText").value.toString();
+UpdateE()
+}
+
+function UpdateE(){
+  document.getElementById("ECRes").innerHTML=Encript(ECte,ECnu);
+}
+
+function DECN(){
+  DECnu=parseInt(document.getElementById("DECNumber").value);
+  UpdateD()
+  }
+  
+  function DECT(){
+  DECte=document.getElementById("DECText").value.toString();
+  UpdateD()
+  }
+  
+  function UpdateD(){
+    document.getElementById("DECRes").innerHTML=Decript(DECte,DECnu);
+  }
