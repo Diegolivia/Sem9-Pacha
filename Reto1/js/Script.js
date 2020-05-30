@@ -3,7 +3,7 @@ function Encript(CiphText, CiphNum) {
   [...CiphText].forEach((char) => {
     let car = char.charCodeAt() + CiphNum;
     switch (car) {
-        case 35:
+        case 32+ CiphNum:
         car = 32;
         break;
       case 93:
@@ -43,7 +43,7 @@ function Decript(CiphText, CiphNum) {
     [...CiphText].forEach((char) => {
       let car = char.charCodeAt() - CiphNum;
       switch (car) {
-        case 29:
+        case 32- CiphNum:
             car = 32;
             break;
         case 62:
