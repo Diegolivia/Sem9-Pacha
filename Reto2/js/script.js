@@ -2,6 +2,7 @@ var dinero = 5;
 var juego = true;
 
 function Welcome() {
+  document.getElementById("moni").innerHTML = dinero;
   console.log(
     "Bienvenido! Tienes " +
       dinero +
@@ -17,12 +18,12 @@ function Apostar(Numero, Apuesta) {
       dado = Math.floor(Math.random() * 6) + 1;
       if (dado == Numero) {
         dinero = dinero + Apuesta;
-        alert("Ganaste " + Apuesta + "!");
-        return Actualizar();
+        Actualizar();
+        return "Ganaste " + Apuesta + "!";
       } else {
         dinero = dinero - Apuesta;
-        alert("Perdiste " + Apuesta + "!");
-        return Actualizar();
+        Actualizar();
+        return "Perdiste " + Apuesta + "!";
       }
     } else {
       return "Ese numero del dado no existe we";
@@ -33,13 +34,17 @@ function Apostar(Numero, Apuesta) {
 }
 
 function Actualizar() {
-  console.clear();
+  document.getElementById("moni").innerHTML = dinero;
   if (dinero >= 200) {
     juego = false;
-    return "TIENES " + dinero + "! HAS GANADO! FELICIDADES!";
+    alert("TIENES " + dinero + "! HAS GANADO! FELICIDADES!");
+    document.getElementById("SysMsg").innerHTML =
+      "TIENES " + dinero + "! HAS GANADO! FELICIDADES!";
   } else if (dinero == 0) {
     juego = false;
-    return "TIENES " + dinero + "! Has perdido :c";
+    alert("TIENES " + dinero + "! Has perdido :c");
+    document.getElementById("SysMsg").innerHTML =
+      "TIENES " + dinero + "! Has perdido :c";
   } else {
     return (
       "Tienes " +
@@ -47,4 +52,11 @@ function Actualizar() {
       " dolares\nPuedes apostar usando Apostar(<numero a apostar>,<dinero apostado>)"
     );
   }
+}
+
+function BET() {
+  document.getElementById("BetRes").innerHTML = Apostar(
+    parseInt(document.getElementById("BetNumber").value),
+    parseInt(document.getElementById("BetMoney").value)
+  );
 }
