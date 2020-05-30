@@ -1,6 +1,7 @@
 //CODIGO PARA LA CONSOLA
 function Encript(CiphText, CiphNum) {
   let str = "";
+  CiphNum=CiphNum%26;
   [...CiphText].forEach((char) => {
     let car = char.charCodeAt() + CiphNum;
     if (car >= 91 && car <= 91 + CiphNum) {
@@ -25,6 +26,7 @@ function Encript(CiphText, CiphNum) {
 }
 
 function Decript(CiphText, CiphNum) {
+  CiphNum=CiphNum%26;
   let str = "";
   [...CiphText].forEach((char) => {
     let car = char.charCodeAt() - CiphNum;
@@ -45,34 +47,16 @@ function Decript(CiphText, CiphNum) {
 
 //CODIGO PARA LA INTERFAZ
 
-var ECte=""
-var ECnu=0
-var DECte=""
-var DECnu=0
-function ECN(){
-ECnu=parseInt(document.getElementById("ECNumber").value);
-UpdateE()
+function UpdateE() {
+  document.getElementById("ECRes").innerHTML = Encript(
+    document.getElementById("ECText").value.toString(),
+    parseInt(document.getElementById("ECNumber").value)
+  );
 }
 
-function ECT(){
-ECte=document.getElementById("ECText").value.toString();
-UpdateE()
+function UpdateD() {
+  document.getElementById("DECRes").innerHTML = Decript(
+    document.getElementById("DECText").value.toString(),
+    parseInt(document.getElementById("DECNumber").value)
+  );
 }
-
-function UpdateE(){
-  document.getElementById("ECRes").innerHTML=Encript(ECte,ECnu);
-}
-
-function DECN(){
-  DECnu=parseInt(document.getElementById("DECNumber").value);
-  UpdateD()
-  }
-  
-  function DECT(){
-  DECte=document.getElementById("DECText").value.toString();
-  UpdateD()
-  }
-  
-  function UpdateD(){
-    document.getElementById("DECRes").innerHTML=Decript(DECte,DECnu);
-  }

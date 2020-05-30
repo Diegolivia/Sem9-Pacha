@@ -13,10 +13,10 @@
 
 <div>
     <label for="fname">Numero de Encriptacion</label>
-    <input type="number" id="ECNumber" oninput="ECN()" >
+    <input type="number" id="ECNumber" oninput="UpdateE()" >
 
     <label for="lname">Ingrese el texto</label>
-    <input type="text" id="ECText" oninput="ECT()">
+    <input type="text" id="ECText" oninput="UpdateE()">
 
     <h2>Resultado:</h2><label class="results" id="ECRes">..</label>
 
@@ -25,10 +25,10 @@
 <h1>DESENCRIPTADOR</h1>
 <div>
     <label for="fname">Numero de Encriptacion</label>
-    <input type="number" id="DECNumber" oninput="DECN()" >
+    <input type="number" id="DECNumber" oninput="UpdateD()" >
 
     <label for="lname">Ingrese el texto</label>
-    <input type="text" id="DECText" oninput="DECT()">
+    <input type="text" id="DECText" oninput="UpdateD()">
 
     <h2>Resultado:</h2><label class="results" id="DECRes">..</label>
 
