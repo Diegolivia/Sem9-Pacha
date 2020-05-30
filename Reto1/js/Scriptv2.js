@@ -1,4 +1,4 @@
-function Encript2(CiphText, CiphNum) {
+function Encript(CiphText, CiphNum) {
   let str = "";
   [...CiphText].forEach((char) => {
     let car = char.charCodeAt() + CiphNum;
@@ -23,7 +23,7 @@ function Encript2(CiphText, CiphNum) {
   return str;
 }
 
-function Decript2(CiphText, CiphNum) {
+function Decript(CiphText, CiphNum) {
   let str = "";
   [...CiphText].forEach((char) => {
     let car = char.charCodeAt() - CiphNum;

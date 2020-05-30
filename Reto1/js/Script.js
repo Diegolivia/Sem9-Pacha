@@ -1,3 +1,5 @@
+/*
+Deprecado porque no funciona siempre
 function Encript(CiphText, CiphNum) {
   let str = "";
   [...CiphText].forEach((char) => {
@@ -71,3 +73,4 @@ function Decript(CiphText, CiphNum) {
   });
   console.log(str);
 }
+*/
