@@ -1,3 +1,4 @@
+//CODIGO PARA LA CONSOLA
 function Encript(CiphText, CiphNum) {
   let str = "";
   [...CiphText].forEach((char) => {
@@ -42,6 +43,7 @@ function Decript(CiphText, CiphNum) {
   return str;
 }
 
+//CODIGO PARA LA INTERFAZ
 
 var ECte=""
 var ECnu=0
