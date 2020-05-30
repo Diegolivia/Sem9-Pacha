@@ -20,7 +20,7 @@ function Encript2(CiphText, CiphNum) {
     }
     str += String.fromCharCode(car);
   });
-  console.log(str);
+  return str;
 }
 
 function Decript2(CiphText, CiphNum) {
@@ -39,5 +39,5 @@ function Decript2(CiphText, CiphNum) {
     }
     str += String.fromCharCode(car);
   });
-  console.log(str);
+  return str;
 }
