@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
     <title>Document</title>
-</head>
-<body onload="Welcome()">
+  </head>
+  <body onload="Welcome()">
     Reto 2
-</body>
-<script src="js/Script.js"></script>
+    <div>
+      <h3>Dinero:</h3>
+      <p id="moni">69420</p>
+      <h1 id="SysMsg"></h1>
+    </div>
+    <div>
+      <label for="BetMoney">Dinero a Apostar</label>
+      <input type="number" id="BetMoney" />
+      <label for="BetNumber">Numero a Apostar</label>
+      <input type="number" id="BetNumber" />
+      <input type="submit" value="Lanzar!" onclick="BET()" />
+      <h2>Resultado:</h2>
+      <label class="results" id="BetRes">..</label>
+    </div>
+  </body>
+  <script src="js/Script.js"></script>
 </html>
